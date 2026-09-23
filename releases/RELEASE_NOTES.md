@@ -16,13 +16,13 @@ MD5: 84d5764f511e63ab38f137d9744dd069
 ### 自动安装（推荐）
 
 ```bash
-npm install @gm/electron
+npm install @stevenzxs/electron
 ```
 
 ### 手动安装
 
 1. 下载压缩包
-2. 解压到 `node_modules/@gm/electron/dist/`
+2. 解压到 `node_modules/@stevenzxs/electron/dist/`
 3. 确保 `electron.exe` 可执行
 
 ## 变更日志
