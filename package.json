@@ -43,5 +43,8 @@
     "path.txt",
     "README.md",
     "LICENSE"
-  ]
+  ],
+  "devDependencies": {
+    "archiver": "^8.0.0"
+  }
 }

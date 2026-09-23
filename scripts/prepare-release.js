@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const archiver = require('archiver');
+const { ZipArchive } = require('archiver');
 
 const ELECTRON_BUILD_PATH = 'D:/electron-build/src/out/Release';
 const OUTPUT_DIR = path.join(__dirname, '..', 'releases');
@@ -43,7 +43,7 @@ const DIRECTORIES_TO_PACKAGE = [
 async function createZip(sourceDir, outputPath) {
   return new Promise((resolve, reject) => {
     const output = fs.createWriteStream(outputPath);
-    const archive = archiver('zip', {
+    const archive = new ZipArchive({
       zlib: { level: 9 } // 最高压缩级别
     });
 
