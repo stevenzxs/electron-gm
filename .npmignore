@@ -1,0 +1,25 @@
+# 不要发布到 npm 的文件
+
+# Distribution (二进制文件通过 postinstall 下载)
+dist/
+
+# Scripts
+scripts/
+
+# Tests
+test/
+
+# Documentation source
+docs/
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Development
+*.log
+node_modules/

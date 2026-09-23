@@ -1,0 +1,42 @@
+{
+  "name": "@gm/electron",
+  "version": "43.3.0",
+  "description": "Custom Electron distribution with enhanced features",
+  "main": "index.js",
+  "bin": {
+    "electron": "cli.js"
+  },
+  "scripts": {
+    "postinstall": "node install.js",
+    "prepare-release": "node scripts/prepare-release.js",
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "electron",
+    "custom",
+    "desktop",
+    "app"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourorg/electron-gm.git"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "install.js",
+    "path.txt",
+    "README.md",
+    "LICENSE"
+  ]
+}
