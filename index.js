@@ -30,7 +30,7 @@ function getElectronPath() {
   if (!fs.existsSync(electronPath)) {
     throw new Error(
       `Electron 可执行文件未找到: ${electronPath}\n` +
-      `请运行 'npm install' 或 'npm rebuild @gm/electron' 重新安装`
+      `请运行 'npm install' 或 'npm rebuild @stevenzxs/electron' 重新安装`
     );
   }
 

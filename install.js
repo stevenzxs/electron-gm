@@ -16,9 +16,9 @@ const ELECTRON_VERSION = '43.3.0';
 const PLATFORM = process.platform;
 const ARCH = process.arch;
 
-// 下载地址配置（需要替换为实际的托管地址）
+// 下载地址配置
 const DOWNLOAD_URL = process.env.ELECTRON_CUSTOM_MIRROR ||
-  `https://github.com/yourorg/electron-gm/releases/download/v${ELECTRON_VERSION}/electron-v${ELECTRON_VERSION}-win32-x64.zip`;
+  `https://github.com/stevenzxs/electron-gm/releases/download/v${ELECTRON_VERSION}/electron-v${ELECTRON_VERSION}-win32-x64.zip`;
 
 const installPath = path.join(__dirname, 'dist');
 const electronPath = path.join(installPath, 'electron.exe');

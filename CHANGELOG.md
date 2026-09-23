@@ -55,8 +55,8 @@
 
 ### 与官方版本的区别
 
-| 功能 | 官方 Electron | @gm/electron |
-|------|---------------|--------------|
+| 功能 | 官方 Electron | @stevenzxs/electron |
+|------|---------------|------------------|
 | 基础 API | ✅ | ✅ |
 | Service Worker 增强 | ❌ | ✅ |
 | 窗口数据传递优化 | ❌ | ✅ |
@@ -77,7 +77,7 @@
 npm uninstall electron
 
 # 安装自定义版本
-npm install @gm/electron
+npm install @stevenzxs/electron
 ```
 
 ### 破坏性变更
@@ -106,4 +106,4 @@ npm install @gm/electron
 
 ---
 
-[43.3.0]: https://github.com/yourorg/electron-gm/releases/tag/v43.3.0
+[43.3.0]: https://github.com/stevenzxs/electron-gm/releases/tag/v43.3.0

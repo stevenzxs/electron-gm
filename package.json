@@ -1,5 +1,5 @@
 {
-  "name": "@gm/electron",
+  "name": "@stevenzxs/electron",
   "version": "43.3.0",
   "description": "Custom Electron distribution with enhanced features",
   "main": "index.js",
@@ -15,7 +15,8 @@
     "electron",
     "custom",
     "desktop",
-    "app"
+    "app",
+    "electron-gm"
   ],
   "engines": {
     "node": ">=18.0.0"
@@ -29,8 +30,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourorg/electron-gm.git"
+    "url": "https://github.com/stevenzxs/electron-gm.git"
   },
+  "bugs": {
+    "url": "https://github.com/stevenzxs/electron-gm/issues"
+  },
+  "homepage": "https://github.com/stevenzxs/electron-gm#readme",
   "files": [
     "index.js",
     "cli.js",

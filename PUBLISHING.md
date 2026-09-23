@@ -1,4 +1,4 @@
-# @gm/electron 发布工程
+# @stevenzxs/electron 发布工程
 
 这是用于发布自定义 Electron 版本的 npm 包工程。
 
@@ -102,7 +102,7 @@ npm publish --registry https://your-registry.com
 
 ```json
 {
-  "name": "@gm/electron",           // 包名（需要修改为你的组织/用户名）
+  "name": "@stevenzxs/electron",    // 包名
   "version": "43.3.0",              // 版本号
   "bin": {
     "electron": "cli.js"            // 提供 electron 命令
@@ -161,7 +161,7 @@ A: npm 对包大小没有硬性限制，但超过 100MB 会很慢。因此我们
 A: 支持镜像源配置，用户可以设置 `ELECTRON_CUSTOM_MIRROR` 环境变量。
 
 ### Q: 如何支持离线安装？
-A: 用户可以手动下载 zip 文件，解压到 `node_modules/@gm/electron/dist/` 目录。
+A: 用户可以手动下载 zip 文件，解压到 `node_modules/@stevenzxs/electron/dist/` 目录。
 
 ## 维护清单
 

@@ -1,6 +1,9 @@
-# @gm/electron
+# @stevenzxs/electron
 
 自定义增强版 Electron 发行版，基于 Electron v43.3.0，包含企业级定制功能。
+
+[![npm version](https://img.shields.io/npm/v/@stevenzxs/electron.svg)](https://www.npmjs.com/package/@stevenzxs/electron)
+[![GitHub](https://img.shields.io/github/license/stevenzxs/electron-gm)](https://github.com/stevenzxs/electron-gm/blob/main/LICENSE)
 
 ## 特性
 
@@ -12,11 +15,11 @@
 ## 安装
 
 ```bash
-npm install @gm/electron
+npm install @stevenzxs/electron
 # 或
-yarn add @gm/electron
+yarn add @stevenzxs/electron
 # 或
-pnpm add @gm/electron
+pnpm add @stevenzxs/electron
 ```
 
 ## 使用方法
@@ -24,7 +27,7 @@ pnpm add @gm/electron
 ### 在应用中使用
 
 ```javascript
-const electron = require('@gm/electron');
+const electron = require('@stevenzxs/electron');
 const { app, BrowserWindow } = require('electron');
 
 app.whenReady().then(() => {
@@ -54,7 +57,7 @@ npx electron --version
 ```json
 {
   "devDependencies": {
-    "electron": "npm:@gm/electron@^43.3.0"
+    "electron": "npm:@stevenzxs/electron@^43.3.0"
   }
 }
 ```
@@ -62,7 +65,7 @@ npx electron --version
 或使用别名：
 
 ```bash
-npm install electron@npm:@gm/electron@43.3.0
+npm install electron@npm:@stevenzxs/electron@43.3.0
 ```
 
 ## 系统要求
@@ -111,8 +114,8 @@ npm install
 
 如果自动下载失败，可以手动下载并安装：
 
-1. 从 [Releases](https://github.com/yourorg/electron-gm/releases) 下载对应版本的压缩包
-2. 解压到 `node_modules/@gm/electron/dist/` 目录
+1. 从 [Releases](https://github.com/stevenzxs/electron-gm/releases) 下载对应版本的压缩包
+2. 解压到 `node_modules/@stevenzxs/electron/dist/` 目录
 3. 确保 `electron.exe` 可执行
 
 ### 权限问题
@@ -121,7 +124,7 @@ Windows 上可能需要管理员权限或关闭防病毒软件：
 
 ```bash
 # 以管理员身份运行 PowerShell
-npm install @gm/electron --force
+npm install @stevenzxs/electron --force
 ```
 
 ### 网络问题
@@ -141,7 +144,7 @@ npm config set https-proxy http://proxy.company.com:8080
 
 ## 版本对应关系
 
-| @gm/electron | Electron | Chromium | Node.js | V8 |
+| @stevenzxs/electron | Electron | Chromium | Node.js | V8 |
 |--------------|----------|----------|---------|-----|
 | 43.3.0       | 43.3.0   | 133.x    | 20.x    | 13.3 |
 
@@ -155,9 +158,8 @@ MIT License
 
 ## 支持
 
-- **Issues**: [GitHub Issues](https://github.com/yourorg/electron-gm/issues)
-- **讨论**: [GitHub Discussions](https://github.com/yourorg/electron-gm/discussions)
-- **邮箱**: support@yourcompany.com
+- **Issues**: [GitHub Issues](https://github.com/stevenzxs/electron-gm/issues)
+- **讨论**: [GitHub Discussions](https://github.com/stevenzxs/electron-gm/discussions)
 
 ## 贡献
 
@@ -166,5 +168,5 @@ MIT License
 ## 相关链接
 
 - [官方 Electron](https://www.electronjs.org/)
-- [发布说明](https://github.com/yourorg/electron-gm/releases)
-- [源码仓库](https://github.com/yourorg/electron-gm)
+- [发布说明](https://github.com/stevenzxs/electron-gm/releases)
+- [源码仓库](https://github.com/stevenzxs/electron-gm)
