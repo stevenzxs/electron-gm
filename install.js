@@ -8,6 +8,8 @@ const { pipeline } = require('stream');
 const { promisify } = require('util');
 const zlib = require('zlib');
 const tar = require('tar');
+const { execFileSync } = require('child_process');
+const { HttpProxyAgent, HttpsProxyAgent } = require('https-proxy-agent');
 
 const streamPipeline = promisify(pipeline);
 
@@ -23,17 +25,57 @@ const DOWNLOAD_URL = process.env.ELECTRON_CUSTOM_MIRROR ||
 const installPath = path.join(__dirname, 'dist');
 const electronPath = path.join(installPath, 'electron.exe');
 
+function readNpmConfig(name) {
+  const envName = `npm_config_${name}`;
+  const envValue = process.env[envName];
+  if (envValue && envValue !== 'null' && envValue !== 'undefined') return envValue.trim();
+
+  try {
+    const npmExecPath = process.env.npm_execpath;
+    const npmCommand = npmExecPath ? (process.env.npm_node_execpath || process.execPath) : 'npm';
+    const npmArgs = npmExecPath ? [npmExecPath, 'config', 'get', name] : ['config', 'get', name];
+    const value = execFileSync(npmCommand, npmArgs, {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+      windowsHide: true,
+    }).trim();
+    return value && value !== 'null' && value !== 'undefined' ? value : '';
+  } catch {
+    return '';
+  }
+}
+
+function getProxyUrl() {
+  return (
+    readNpmConfig('https-proxy') ||
+    readNpmConfig('proxy') ||
+    process.env.HTTPS_PROXY ||
+    process.env.https_proxy ||
+    process.env.HTTP_PROXY ||
+    process.env.http_proxy ||
+    ''
+  );
+}
+
 async function downloadFile(url, destPath) {
   const protocol = url.startsWith('https') ? https : http;
+  const proxyUrl = getProxyUrl();
+  const requestOptions = {
+    headers: {
+      'User-Agent': 'electron-gm-installer'
+    }
+  };
+  if (proxyUrl) {
+    requestOptions.agent = url.startsWith('https:')
+      ? new HttpsProxyAgent(proxyUrl)
+      : new HttpProxyAgent(proxyUrl);
+    console.log(`使用 npm 代理下载: ${proxyUrl.replace(/\/\/[^@]+@/, '//***@')}`);
+  }
 
   return new Promise((resolve, reject) => {
     console.log(`正在从 ${url} 下载...`);
 
-    protocol.get(url, {
-      headers: {
-        'User-Agent': 'electron-gm-installer'
-      }
-    }, (response) => {
+    protocol.get(url, requestOptions, (response) => {
       // 处理重定向
       if (response.statusCode === 301 || response.statusCode === 302) {
         return downloadFile(response.headers.location, destPath)
