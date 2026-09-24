@@ -14,7 +14,8 @@ const { HttpProxyAgent, HttpsProxyAgent } = require('https-proxy-agent');
 const streamPipeline = promisify(pipeline);
 
 // 配置项
-const ELECTRON_VERSION = '43.3.1';
+// npm package patch version is 43.3.1; the bundled custom Electron binary remains 43.3.0.
+const ELECTRON_VERSION = '43.3.0';
 const PLATFORM = process.platform;
 const ARCH = process.arch;
 

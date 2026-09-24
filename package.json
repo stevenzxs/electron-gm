@@ -1,6 +1,6 @@
 {
   "name": "@stevenzxs/electron",
-  "version": "43.3.1",
+  "version": "43.3.2",
   "description": "Custom Electron distribution with enhanced features",
   "main": "index.js",
   "bin": {
