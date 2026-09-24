@@ -14,7 +14,7 @@ const { HttpProxyAgent, HttpsProxyAgent } = require('https-proxy-agent');
 const streamPipeline = promisify(pipeline);
 
 // 配置项
-const ELECTRON_VERSION = '43.3.0';
+const ELECTRON_VERSION = '43.3.1';
 const PLATFORM = process.platform;
 const ARCH = process.arch;
 
