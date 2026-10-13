@@ -1,0 +1,6 @@
+SHA256: e50b44eeb50ad21f6bc15e2e63f7c2f109b7fc4c53c4510bb5aa7affcc704bf1
+MD5: 5f119419bbb2a9e7ed17b12fd7d6092d
+
+Verify with:
+  sha256sum -c <file>.checksums.txt
+  md5sum -c <file>.checksums.txt

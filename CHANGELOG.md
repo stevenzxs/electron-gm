@@ -5,6 +5,23 @@
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
 版本号遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
+
+## [43.3.3] - 2026-10-09
+
+### 新增
+
+- 国密 DTLS-SRTP 媒体传输支持（SM4-GCM SRTP protection profile，PoC 编号 0x0100）
+- BoringSSL 集成 SM4 分组算法与 SM4-GCM AEAD（含 RFC 8998 测试向量）
+- libsrtp 接入 BoringSSL 后端 SM4-GCM cipher 与 `SRTP_SM4_GCM` profile
+- WebRTC `use_srtp` 协商支持 `SRTP_SM4_GCM`，keying material 导出 2x(16+12) 字节
+
+### 变更
+
+- 二进制版本戳升级为 43.3.3（`electron --version` 输出 v43.3.3）
+
+### 备注
+
+- 国密媒体栈为 PoC 私有 profile，正式编号待商密测评确认；仅影响 DTLS-SRTP 媒体链路，HTTPS/WSS 信令保持标准 TLS。
 ## [43.3.0] - 2026-09-23
 
 ### 新增

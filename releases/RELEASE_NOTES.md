@@ -1,14 +1,14 @@
-# Electron GM v43.3.0 Release
+# Electron GM v43.3.3 Release
 
 ## 下载
 
-- **Windows x64**: [electron-v43.3.0-win32-x64.zip](electron-v43.3.0-win32-x64.zip)
+- **Windows x64**: [electron-v43.3.3-win32-x64.zip](electron-v43.3.3-win32-x64.zip)
 
 ## 校验和
 
 ```
-SHA256: 0c8dc858db04085f3a3c09e68128bece32cee40e087720cb65b49b36cac7f94e
-MD5: 84d5764f511e63ab38f137d9744dd069
+SHA256: e50b44eeb50ad21f6bc15e2e63f7c2f109b7fc4c53c4510bb5aa7affcc704bf1
+MD5: 5f119419bbb2a9e7ed17b12fd7d6092d
 ```
 
 ## 安装
@@ -16,13 +16,13 @@ MD5: 84d5764f511e63ab38f137d9744dd069
 ### 自动安装（推荐）
 
 ```bash
-npm install @stevenzxs/electron
+npm install @gm/electron
 ```
 
 ### 手动安装
 
 1. 下载压缩包
-2. 解压到 `node_modules/@stevenzxs/electron/dist/`
+2. 解压到 `node_modules/@gm/electron/dist/`
 3. 确保 `electron.exe` 可执行
 
 ## 变更日志
@@ -36,4 +36,4 @@ npm install @stevenzxs/electron
 
 ---
 
-Generated on: 2026-09-23T10:11:14.059Z
+Generated on: 2026-10-09T00:51:53.388Z

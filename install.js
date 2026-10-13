@@ -15,7 +15,7 @@ const streamPipeline = promisify(pipeline);
 
 // 配置项
 // npm package patch version is 43.3.1; the bundled custom Electron binary remains 43.3.0.
-const ELECTRON_VERSION = '43.3.0';
+const ELECTRON_VERSION = '43.3.3';
 const PLATFORM = process.platform;
 const ARCH = process.arch;
 
